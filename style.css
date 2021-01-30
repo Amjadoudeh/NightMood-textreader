@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "roboto", sans-serif;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.label {
+  background-color: rgb(51, 50, 50);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  padding: 5px;
+}
+.fa-moon {
+  color: #f1c40d;
+}
+
+.fa-sun {
+  color: #e69011;
+}
+.ball {
+  background-color: aliceblue;
+  width: 22px;
+  height: 23.5px;
+  border-radius: 50%;
+  position: absolute;
+  transition: trasform 0.6s linear;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(18px);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.container h1 {
+  font-family: "roboto", sans-serif;
+  display: inline-flex;
+}
+
+.container p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+}
+
+.button {
+  border: none;
+  background-color: #fff;
+  font-weight: bolder;
+  font-size: 20px;
+  color: rgb(235, 0, 0);
+}
+.button:hover {
+  letter-spacing: 6px;
+}
+.button:focus {
+  outline: 0;
+  opacity: 0.4;
+}
+
+body.dark,
+.dark .button {
+  background-color: #26304b;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  body {
+    overflow: scroll;
+  }
+}
